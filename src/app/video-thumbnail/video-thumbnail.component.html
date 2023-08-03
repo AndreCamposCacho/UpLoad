@@ -1,0 +1,37 @@
+<div class="video">
+
+  <div class="imagem">
+    <img src="{{link}}{{thumbnail__target_id}}" [routerLink]="['/video-player',mid]">
+    <div class="duration">
+      {{field_media_duration}}
+    </div>
+
+    <div class="imagem_user">
+      <img src="{{link}}{{field_user_photo}}">
+    </div>
+  </div>
+
+
+  <div class="informação">
+    <div class="texto">
+      <div class="channel_name">{{field_channel}}</div>
+      <div class="video_name" routerLink="/video-player" (click)="selectVideo()">{{name}}</div>
+      <div class="time_ago" routerLink="/video-player" (click)="selectVideo()">{{created}}</div>
+    </div>
+
+    <div class="icones">
+      <div class="bockmark">
+        <fa-icon
+          [icon]="isFavorite(mid)? fullBookmark : emptyBookmark"
+          (click)="toggleFavorite(mid)"
+        >
+        </fa-icon>
+      </div>
+      <div class="sharenodes" (click)="openDialog()">
+        <fa-icon [icon]="fasharenodes"></fa-icon>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="wrapper">
+
+  <div class="header">
+
+    <div class="detplaylist" *ngFor=" let vplay of video_T ">
+
+      <div class="cont_img">
+        <img src="{{link}}{{vplay.field_thumbnail_playlist}}">
+      </div>
+
+      <div class="cont_name">
+        <p>Playlist  {{vplay.title}}</p>
+
+        <div class="categoria">
+          <p>Category: {{vplay.field_categoria_playlist}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div class="rep_todos">
+        <button> <fa-icon  [icon]="faplay"></fa-icon>  Play All</button>
+      </div>
+
+      <div class="aleatorios">
+        <button> <fa-icon  [icon]="fashuffle"></fa-icon>  Shuffle</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+  <div class="agrup_videos">
+    <div class="videos" *ngFor="let video of videos" [routerLink]="['/video-player',video.mid]">
+
+      <div class="video">
+        <div class="playicon">
+          <fa-icon  [icon]="faplay"></fa-icon>
+        </div>
+        <div class="imagem">
+          <img src="{{link}}{{video.thumbnail__target_id}}">
+          <div class="duration">
+            {{video.field_media_duration}}
+          </div>
+        </div>
+        <div class="video_name">
+          {{video.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

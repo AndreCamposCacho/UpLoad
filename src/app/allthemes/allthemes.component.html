@@ -1,0 +1,44 @@
+<div class="wrapper">
+
+  <div class="article" *ngFor="let l of lista_temas">
+
+    <div class="left">
+      <div class="header"> <img src="{{link}}{{l.field_thumbnail_thematic}}"> </div>
+      <div class="body">
+        <h1>{{l.title}}</h1>
+        <h2>{{l.field_thematic_teaser}}</h2>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div class="videos_cont">
+    <div class="ultimos_videos"></div>
+    <div class="agrupar">
+      <div class="videos" *ngFor="let video of videos">
+
+        <div class="video">
+          <div class="imagem">
+            <img src="{{link}}{{video.thumbnail__target_id}}" [routerLink]="['/video-player',video.mid]">
+          </div>
+
+          <div class="informação">
+            <div class="texto">
+              <div class="channel_name">{{video.field_channel}}</div>
+              <div class="video_name">{{video.name}}</div>
+              <div class="time_ago">{{video.created}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more">
+    <button class="buttonmore" (click)="moreResults()">mais resultados</button>
+  </div>
+
+</div>

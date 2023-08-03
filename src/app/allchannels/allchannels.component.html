@@ -1,0 +1,45 @@
+<div class="wrapper">
+
+  <div class="canais_sugeridos">
+    <div class="texto">
+      Canais Sugeridos
+    </div>
+    <hr>
+
+    <div class="canais" *ngFor="let c of lista_canais" [routerLink]="['/channel/', c.nid]">
+      <div class="userphoto">
+        <img src="{{link}}{{c.field_user_photo}}">
+      </div>
+      <div class="name">
+        {{c.title}}
+      </div>
+    </div>
+
+    <div class="mostrar_mais">
+      <button (click)="moreResults()"> Mostrar Mais </button>
+    </div>
+
+  </div>
+
+
+  <div class="tematica_sugerida">
+    <div class="texto">
+      Temáticas Sugeridas
+    </div>
+    <hr>
+    <div class="tematica" *ngFor="let tema of lista_temas" [routerLink]="['/allthemes']">
+      <div class="top">
+        <div class="headerimg">
+          <img src="{{link}}{{tema.field_header_image}}">
+        </div>
+        <div class="title">
+          {{tema.title}}
+        </div>
+      </div>
+      <div class="thumbtema">
+        <img src="{{link}}{{tema.field_thumbnail_thematic}}">
+      </div>
+    </div>
+  </div>
+
+</div>

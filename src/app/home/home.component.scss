@@ -1,0 +1,19 @@
+.wrapper {
+
+  .conteudo {
+    display: flex;
+
+    @media (min-width: 979px) {
+      .sugeridos {
+        padding: 16px;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 978px) {
+      .sugeridos {
+        display: none;
+      }
+    }
+  }
+}

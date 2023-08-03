@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="menus">
+    <app-up-load-logo></app-up-load-logo>
+  </div>
+  <div class="conteudo">
+    <router-outlet
+    infinite-scroll
+    (scrolled)="testScroll()"></router-outlet>
+  </div>
+</div>

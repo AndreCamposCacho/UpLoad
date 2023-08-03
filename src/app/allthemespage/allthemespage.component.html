@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<div class="wrapper">
+
+
+  <div class="content" *ngFor="let l of lista_temas">
+
+    <div class="image" [routerLink]="['/themepage/', l.nid, l.tid]">
+      <img src="{{link}}{{l.field_header_image}}">
+    </div>
+
+    <div class="information">
+      <div class="tags">
+        {{l.field_tags}}
+      </div>
+      <div class="text">
+        {{l.title}}
+      </div>
+
+    </div>
+    <div class="share" (click)="openDialog()">
+
+    </div>
+    <div class="overlay" [routerLink]="['/allthemes/', l.nid]">
+      <h1>Descrição:</h1>
+      <h2>{{l.body}}</h2>
+
+    </div>
+  </div>
+
+
+</div>

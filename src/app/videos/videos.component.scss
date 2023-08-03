@@ -1,0 +1,159 @@
+.container {
+  display: block;
+  width: 100%;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .ultimos_videos {
+    position: fixed;
+    z-index: 5;
+    background-color: #13131A;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    @media (max-width: 2561px) {
+      //Desktop
+      width: 76%;
+      margin-left: 79px;
+    }
+
+    @media (max-width: 2000px) {
+      //Desktop-LaptopL
+      width: 67%;
+    }
+
+    @media (max-width: 1441px) {
+      //Laptop L
+      width: 65%;
+    }
+
+    @media (max-width: 1280px) {
+      //Laptop L-Laptop
+      width: 61%;
+    }
+
+    @media (max-width: 1025px) {
+      //Laptop
+      width: 59%;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 800px) {
+      //Laptop-Tablet
+      width: 56%;
+    }
+
+    @media (max-width: 769px) {
+      //Tablet
+      width: 73%;
+    }
+
+    @media (max-width: 426px) {
+      //Smartphone L
+      width: 60%;
+      margin-left: -13px;
+      padding: 12px 30px;
+    }
+  }
+
+  .agrupar {
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: center;
+    padding-top: 123px;
+
+    @media (max-width: 426px) {
+      //Smartphone L
+      padding-top: 131px;
+      padding-right: 40px;
+      margin-right: 139px;
+    }
+
+    #gradient_top {
+      position: fixed;
+      height: 10%;
+      top: 64px;
+      z-index: 5;
+
+      @media (max-width: 2561px) {
+        //Desktop
+        width: 70%;
+      }
+
+      @media (max-width: 2000px) {
+        //Desktop-LaptopL
+        width: 67%;
+      }
+
+      @media (max-width: 1441px) {
+        //Laptop L
+        width: 65%;
+      }
+
+      @media (max-width: 1280px) {
+        //Laptop L-Laptop
+        width: 62%;
+      }
+
+      @media (max-width: 1025px) {
+        //Laptop
+        width: 58%;
+      }
+
+      @media (max-width: 800px) {
+        //Laptop-Tablet
+        width: 56%;
+      }
+
+      @media (max-width: 769px) {
+        //Tablet
+        width: 74%;
+      }
+
+      @media (max-width: 426px) {
+        //Smartphone L
+        width: 75%;
+        top: 136px;
+        z-index: 5;
+      }
+
+      z-index: 10;
+      background: linear-gradient(180deg,
+        rgba(19, 19, 26, 1) 0%,
+        rgba(19, 19, 26, 1) 25%,
+        rgba(19, 19, 26, 0.99) 50%,
+        rgba(19, 19, 26, 0.95) 63%,
+        rgba(19, 19, 26, 0.88) 73%,
+        rgba(19, 19, 26, 0.76) 84%,
+        rgba(19, 19, 26, 0) 100%);
+
+    }
+
+    @media (min-width: 426px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+}

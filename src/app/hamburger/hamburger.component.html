@@ -1,0 +1,42 @@
+<div id="main_container" [ngClass]="{show: this.open}">
+  <div id="buttons_container">
+      <div id="home" class="button" routerLink="/home" routerLinkActive="active">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+        <div class="button_title" >Home</div>
+      </div>
+      <div id="channels" class="button" routerLink="/channels" routerLinkActive="active">
+          <fa-icon [icon]="channelsIcon"></fa-icon>
+          <div class="button_title" >Channels</div>
+      </div>
+      <div id="themes" class="button" routerLink="/allthemes" routerLinkActive="active">
+          <fa-icon [icon]="themesIcon"></fa-icon>
+          <div class="button_title">Themes</div>
+      </div>
+      <div id="playlists" class="button" routerLink="/playlists" routerLinkActive="active">
+          <fa-icon [icon]="playlistsIcon"></fa-icon>
+          <div class="button_title">Playlists</div>
+      </div>
+      <div id="favorites" class="button" routerLink="/favorites" routerLinkActive="active">
+        <fa-icon [icon]="videoIcon"></fa-icon>
+        <div class="button_title">My Videos</div>
+    </div>
+  </div>
+
+  <div id="tags_container">
+    <p id="tags_title">TAGS</p>
+    <div class="agruptags">
+      <div id="tags" *ngFor="let tag of tags" [routerLink]="['/videostag/', tag.tid]">
+        <div class="name">
+          {{tag.name}}
+        </div>
+      </div>
+    </div>
+    <button class="more_tags" (click)="moreTags()">more tags</button>
+  </div>
+
+  <div class=" multlang">
+    <button (click)="translate(); refreshPage()">EN / PT</button>
+  </div>
+
+
+</div>

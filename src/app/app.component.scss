@@ -1,0 +1,46 @@
+.wrapper {
+  @media (min-width: 426px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #13131A;
+    color: white;
+
+    .conteudo{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 426px) {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #13131A;
+    color: white;
+
+    .menus {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+
+    .conteudo {
+      margin-top: 87px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .menus {
+    //max-width: 170px;
+    //flex: 1;
+
+  }
+
+  .conteudo {
+    height: 100vh;
+    overflow: auto;
+    padding-left: 180px;
+
+  }
+}

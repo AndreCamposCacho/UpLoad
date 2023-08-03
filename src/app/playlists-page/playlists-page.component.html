@@ -1,0 +1,33 @@
+
+<div class="wrapper">
+
+
+  <div class="content" *ngFor="let playlist of lista_playlist" [routerLink]="['/playlistsvideos/', playlist.nid]" >
+
+    <div class="image" [routerLink]="['/allthemes/', playlist.nid]">
+      <img src="{{link}}{{playlist.field_thumbnail_playlist}}">
+    </div>
+
+    <div class="information">
+      <div class="tags">
+        {{playlist.field_categoria_playlist}}
+      </div>
+      <div class="text">
+        {{playlist.title}}
+      </div>
+
+    </div>
+
+    <div class="overlay" [routerLink]="['/playlistsvideos/', playlist.nid]">
+      <h1>Description:</h1>
+      <h2>{{playlist.body}}</h2>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+

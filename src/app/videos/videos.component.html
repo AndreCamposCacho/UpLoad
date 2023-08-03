@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="ultimos_videos">Últimos Vídeos</div>
+  <div
+    class="agrupar"
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    [scrollWindow]="false"
+    (scrolled)="onScroll()"
+  >
+    <div id="gradient_top"></div>
+    <div class="video" *ngFor="let video of lista_videos">
+      <app-video-thumbnail
+        [created]="video.created"
+        [mid]="video.mid"
+        [name]="video.name"
+        [field_tags]="video.field_tags"
+        [thumbnail__target_id]="video.thumbnail__target_id"
+        [field_categorias]="video.field_categorias"
+        [field_channel]="video.field_channel"
+        [field_user_photo]="video.field_user_photo"
+        [field_media_oembed_video]="video.field_media_oembed_video"
+        [field_media_description]="video.field_media_description"
+        [field_media_duration]="video.field_media_duration"
+      >
+      </app-video-thumbnail>
+    </div>
+  </div>
+</div>

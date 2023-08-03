@@ -1,0 +1,29 @@
+
+<div class="wrapper">
+
+
+  <div class="content" *ngFor="let canal of lista_canais"  >
+
+    <div class="image" [routerLink]="['/channel/', canal.nid]">
+      <img src="{{link}}{{canal.field_thumbnail_channel}}">
+    </div>
+
+    <div class="information">
+
+      <div class="text">
+        {{canal.title}}
+      </div>
+
+      <div class="overlay" [routerLink]="['/channel/', canal.nid]">
+        <h1>Description:</h1>
+        <h2>{{canal.body}}</h2>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</div>

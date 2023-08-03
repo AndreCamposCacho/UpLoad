@@ -1,0 +1,17 @@
+<div class="agrupar">
+    <div class="video" *ngFor="let video of lista_videos">
+        <app-video-thumbnail
+          [created]="video.created"
+          [mid]="video.mid"
+          [name]="video.name"
+          [field_tags]="video.field_tags"
+          [thumbnail__target_id]="video.thumbnail__target_id"
+          [field_categorias]="video.field_categorias"
+          [field_channel]="video.field_channel"
+          [field_user_photo]="video.field_user_photo"
+          [field_media_oembed_video]="video.field_media_oembed_video"
+        >
+        </app-video-thumbnail>
+    </div>
+    <button id="More_Suggestions" (click)="moreSuggestions()">More Suggestions</button>
+</div>

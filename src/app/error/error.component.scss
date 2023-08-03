@@ -1,0 +1,22 @@
+#main_container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #13131A;
+
+    #error404 {
+        width: 100%;
+    }
+
+    #not_found {
+        width: 100%;
+    }
+
+    #home_link {
+        width: 100%;
+    }
+}

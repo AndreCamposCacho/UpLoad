@@ -1,0 +1,11 @@
+<div id="main_container">
+  <div id="main_logo_container">
+    <div id="hamburger_icon" (click)="toggleHamburger()">
+        <fa-icon [icon] = " openHamburger ? closeIcon : hamburgerIcon "></fa-icon>
+    </div>
+    <div id="main_logo" (click)="mobileCheck()">
+        <img id="upload_icon" src="../../assets/upload.png" alt="upload_icon">
+    </div>
+  </div>
+  <app-hamburger [open]="openHamburger || !mobile"></app-hamburger>
+</div>

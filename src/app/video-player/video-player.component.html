@@ -1,0 +1,79 @@
+<div id="main_container">
+    <div id="title_container">
+        <div id="title_tags">
+            <div id="video_title">{{video.name}}</div>
+            <div class="tags">#{{video.field_tags}}</div>
+        </div>
+        <div id="flag">
+            <fa-icon [icon]="flagIcon"></fa-icon>
+        </div>
+    </div>
+    <div id="video_and_suggestions_container">
+        <div id="main_video_container">
+            <div id="video_container">
+                <iframe [src]="sanitizedUrl"></iframe>
+            </div>
+            <div id="video_details">
+                <div id="channel_pic_container">
+                    <img id="channel_pic" src="{{link}}{{video.field_user_photo}}" alt="channel_profile_picture">
+                </div>
+                <div id="channel_and_publicationDate">
+                    <div id="channel_name">{{video.field_channel}}</div>
+                    <div id="publication_date">{{video.created}}</div>
+                </div>
+                <div id="like_dislike">
+                    <div id="likeIcon" (click)="like()">
+                        <fa-icon [icon]=" isLiked ? likedIcon : likeIcon "></fa-icon>
+                    </div>
+                    <div id="likeCount">{{likeApi}}</div>
+                    <div id="divisionBar">|</div>
+                    <div id="dislikeIcon" (click)="dislike()">
+                        <fa-icon [icon]=" isDisliked ? dislikedIcon : dislikeIcon "></fa-icon>
+                    </div>
+                    <div id="dislikeCount">{{dislikeApi}}</div>
+                </div>
+            </div>
+            <div id="description">
+                {{taglessDescription}}
+            </div>
+            <div id="comment_submit_section">
+                <div id="user_pic_selection">
+                    <img id="user_pic" src="{{link}}{{video.field_user_photo}}" alt="user_pic_placeholder">
+                </div>
+                <form
+                    #submit = "ngForm"
+                    (ngSubmit)="commentSubmission(submit)"
+                    id="comment_forms"
+                >
+                    <div id="name_and_mail" class="form-group">
+                        <input type="text" name="username" placeholder="Name" id="name_submission" ngModel>
+                        <input type="email" name="usermail" placeholder="e-mail (not required)" id="mail_submission" ngModel>
+                    </div>
+                    <input type="text" name="usercomment" placeholder="Comment" id="comment_submission" ngModel>
+                    <div id="button_container">
+                        <button type="submit">Submit Comment</button>
+                    </div>
+                </form>
+            </div>
+            <div id="comment_section">
+                <div id="comments" *ngFor="let comment of comments">
+                    <div id="user_pic">
+                        {{this.userPicGenerator(comment.name)}}
+                    </div>
+                    <div id="comment_published">
+                        <div id="user_and_publicationDate">
+                            <div id="user_name">{{usernameCleaner(comment.name)}}</div>
+                            <div id="publicationDate">{{comment.created}}</div>
+                        </div>
+                        <div id="comment">
+                            {{comment.comment_body}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="suggested_videos_container">
+            <app-suggested-videos></app-suggested-videos>
+        </div>
+    </div>
+</div>

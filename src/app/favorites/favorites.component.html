@@ -1,0 +1,25 @@
+<div id="main_container">
+    <div id="empty_page" *ngIf="this.uploadservice.favorite_ids.length == 0">
+        <div id="empty_title">You haven't choose any of our videos</div>
+        <div id="empty_message">Select a video from the <fa-icon [icon]="emptyBookmark"></fa-icon> icon</div>
+        <a id="home_link" routerLink="/home" routerLinkActive="active">Home Page</a>
+    </div>
+    <div id="favorites" *ngIf="this.uploadservice.favorite_ids.length > 0">
+        <div id="page_header">My Favorite Videos</div>
+        <div id="gradient_top"></div>
+        <div class="video" *ngFor="let favorite of favorite_videos">
+            <app-video-thumbnail 
+              [created]="favorite.created"
+              [mid]="favorite.mid"
+              [name]="favorite.name"
+              [field_tags]="favorite.field_tags"
+              [thumbnail__target_id]="favorite.thumbnail__target_id"
+              [field_categorias]="favorite.field_categorias"
+              [field_channel]="favorite.field_channel"
+              [field_user_photo]="favorite.field_user_photo"
+              [field_media_oembed_video]="favorite.field_media_oembed_video"
+            >
+            </app-video-thumbnail>
+        </div>
+    </div>
+</div>

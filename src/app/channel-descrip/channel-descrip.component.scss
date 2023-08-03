@@ -1,0 +1,84 @@
+.canal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+
+  .thumb {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+
+
+    .thumbnailphoto {
+
+      @media (min-width: 426px) {
+        width: 94%;
+      }
+
+      @media (max-width: 426px) {
+        width: 95%;
+      }
+
+      img {
+        width: 97%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+    }
+
+    .userphoto {
+      position: absolute;
+      height: 80px;
+      border-radius: 50%;
+      width: 80px;
+      right: 10%;
+
+      @media (min-width: 426px) {
+        top:  107px;
+      }
+
+      @media (max-width: 426px) {
+        top: 118px;
+        width: 50px;
+      }
+
+      img {
+        width: 100%;
+        border: 3px solid #B5B5BE;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .info {
+    display: block;
+    margin-left: 5%;
+
+    .name {
+      margin-top: 7px;
+      margin-bottom: 7px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 450;
+      font-size: 28px;
+      line-height: 42px;
+      color: #FAFAFB;
+    }
+
+    .descrição {
+      width: 450px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 14px;
+      line-height: 20px;
+
+      text-align: justify;
+      color: #92929D;
+    }
+  }
+}

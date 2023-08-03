@@ -1,0 +1,133 @@
+.wrapper {
+  .canais_sugeridos {
+    @media (min-width: 1026px) {
+      width: 214px;
+    }
+    width: 166px;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70%;
+    background-color: #1C1C24;
+    border: 1px solid #33333e;
+
+    .texto {
+      display: flex;
+      margin-left: 30px;
+      height: 30px;
+      align-items: center;
+    }
+
+    .canais {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      padding-left: 14px;
+      cursor: pointer;
+
+      .userphoto {
+        img {
+          width: 33px;
+          height: 33px;
+          border-radius: 50%;
+        }
+      }
+
+      .name {
+        margin-left: 10px;
+      }
+    }
+
+    .mostrar_mais {
+
+      text-align: center;
+      margin-bottom: 10px;
+      height: 40px;
+
+      button {
+        cursor: pointer;
+        width: 100%;
+        background-color: rgba(181, 181, 190, 0.21);
+        margin-top: 11px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 100%;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 100%;
+        border: 0px solid;
+        color: #FFFFFF
+      }
+
+
+    }
+  }
+
+
+  .tematica_sugerida {
+    @media (min-width: 1026px) {
+      width: 214px;
+      height: 250px;
+    }
+    background-color: #1C1C24;
+    justify-content: center;
+    width: 166px;
+    border-radius: 20px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70%;
+    margin-top: 20px;
+    border: 1px solid #33333e;
+
+    .texto {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tematica {
+      margin-top: 20px;
+      margin-left: 20px;
+
+      .top {
+        display: flex;
+        align-items: center;
+
+        .headerimg {
+          img {
+            @media (min-width: 1026px) {
+              width: 55px;
+              height: 55px;
+            }
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+        }
+
+        .title {
+          margin-left: 5px;
+        }
+      }
+
+      .thumbtema {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        img {
+
+          @media (min-width: 1026px) {
+            width: 180px;
+            height: 113px;
+          }
+          width: 125px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+
+}

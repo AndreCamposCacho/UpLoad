@@ -1,0 +1,287 @@
+#main_container {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Poppins';
+
+    #title_container {
+        width: 100%;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 17px;
+
+        #title_tags {
+            width: 60%;
+
+            #video_title {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+            .tags {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 0.65rem;
+                line-height: 16px;
+                letter-spacing: 0.1px;
+                color: #1E6AE3;
+            }
+        }
+
+        #flag {
+            display: flex;
+            align-items: center;
+
+            fa-icon {
+                color: #B5B5BE;
+            }
+        }
+    }
+
+    #video_and_suggestions_container {
+        width: 100%;
+        display: flex;
+
+        #main_video_container {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #video_container {
+                width: 100%;
+
+                iframe {
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    border: 0;
+                    border-radius: 13px;
+                }
+            }
+
+            #video_details {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding-top: 14px;
+                padding-bottom: 14px;
+
+                #channel_pic_container {
+                    max-width: 10%;
+                    cursor: pointer;
+                    width: 45px;
+                    height: 45px;
+                    border: 1.5px solid #B5B5BE;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                #channel_and_publicationDate {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 14px;
+
+                    #channel_name {
+                        font-size: 0.9rem;
+                    }
+
+                    #publication_date {
+                        font-size: 0.7rem;
+                        color: #B5B5BE;
+                    }
+                }
+
+                #like_dislike {
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+
+                    #likeIcon {
+                        cursor: pointer;
+                    }
+
+                    #likeCount {
+                        margin-left: 7px;
+                        font-size: 0.7rem;
+                    }
+
+                    #divisionBar {
+                        margin-left: 14px;
+                        margin-right: 14px;
+                    }
+
+                    #dislikeIcon {
+                        cursor: pointer;
+
+                        fa-icon {
+                        }
+                    }
+
+                    #dislikeCount {
+                        margin-left: 14px;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+
+            #description {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 14px;
+                font-size: 0.7rem;
+                font-weight: 400;
+                line-height: 20px;
+                border-radius: 10px;
+                color: #B5B5BE;
+                background-color: #1C1C24;
+            }
+
+            #comment_submit_section {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                #user_pic_selection {
+                    width: 45px;
+                    height: 45px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                #comment_forms {
+                    width: 85%;
+                    margin-left: 10px;
+
+                    input{
+                        color: white ;
+                        outline: none;
+                        padding: 7px 0;
+                    }
+
+                    #name_and_mail {
+                        display: flex;
+
+                        #name_submission {
+                            width: 50%;
+                            background-color: #13131A;
+                            border: 0;
+                            border-bottom: 1px solid #B5B5BE;
+                        }
+
+                        #mail_submission {
+                            width: 50%;
+                            background-color: #13131A;
+                            border: 0;
+                            border-bottom: 1px solid #B5B5BE;
+                        }
+                    }
+
+                    #comment_submission {
+                        width: 100%;
+                        background-color: #13131A;
+                        border: 0;
+                        border-bottom: 1px solid #B5B5BE;
+                    }
+
+                    #button_container {
+                        position: relative;
+                        margin-top: 10px;
+
+                        button {
+                            position: absolute;
+                            right: 0;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            border-radius: 8px;
+                            border: 1.2px solid #B5B5BE;
+                            color: #B5B5BE;
+                            background-color: #1C1C24;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+
+            #comment_section {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                #comments {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 25px;
+
+                    #user_pic {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45px;
+                        height: 45px;
+                        background-color: #bba9d9;
+                        color: black;
+                        border-radius: 50%;
+                        font-weight: 500;
+                        font-size: 130%;
+                    }
+    
+                    #comment_published {
+                        width: 90%;
+                        box-sizing: border-box;
+                        padding: 8px;
+                        margin-left: 5px;
+    
+                        #user_and_publicationDate {
+                            display: flex;
+                            align-items: center;
+    
+                            #user_name {
+                                font-size: 0.7rem;
+                            }
+    
+                            #publicationDate {
+                                font-size: 0.6rem;
+                                margin-left: 5px;
+                                color: #B5B5BE;
+                            }
+                        }
+    
+                        #comment {
+                            width: 100%;
+                            font-size: 0.65rem;
+                            font-weight: 300;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #suggested_videos_container {
+            box-sizing: border-box;
+            margin-left: 14px;
+        }
+    }
+
+}
