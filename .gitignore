@@ -1,0 +1,23 @@
+# Angular-specific
+.angular/
+/dist
+
+# Node
+/node_modules
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
